@@ -4,7 +4,7 @@ public class Student {
 	
 	private int id;
 	private String name, email, matno;
-	private long phone;
+	private Long phone;
 	public int getId() {
 		return id;
 	}
@@ -29,17 +29,19 @@ public class Student {
 	public void setMatno(String matno) {
 		this.matno = matno;
 	}
-	public long getPhone() {
+	public Long getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(Long phone) {
 		this.phone = phone;
 	}
+	
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", email=" + email + ", matno=" + matno + ", phone=" + phone
 				+ "]";
 	}
+	
 	
 	
 	

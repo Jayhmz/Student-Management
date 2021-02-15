@@ -15,7 +15,7 @@
 	<div align="center">
 
 		<table border="1">
-		
+
 			<thead>
 				<tr>
 					<td>S/N</td>
@@ -23,7 +23,7 @@
 					<td>Phone Number</td>
 					<td>Matric Number</td>
 				</tr>
-			</thead> 
+			</thead>
 
 			<c:forEach var="students" items="${students}">
 
@@ -32,12 +32,19 @@
 					<td>${students.name}</td>
 					<td>${students.phone}</td>
 					<td>${students.matno}</td>
+					<td><a href="/student-management/update?userId=${students.id}">Update</a></td>
+					<td><a href="/student-management/delete?userId=${students.id}"
+						onclick="if(!(confirm('Are you sure you want to delete this?'))) return false">Delete</a></td>
 				</tr>
 
 
 			</c:forEach>
 
 		</table>
+
+		<form action="register">
+			<input type="submit" value="ADD">
+		</form>
 	</div>
 
 </body>
