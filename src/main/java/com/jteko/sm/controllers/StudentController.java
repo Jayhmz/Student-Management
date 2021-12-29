@@ -22,10 +22,10 @@ public class StudentController {
 	@Autowired
 	StudentServices services;
 
-	@GetMapping("/list")
+	@GetMapping("/")
 	public String showStudentDetails(Model model) {
 
-		List<Student> studentlist = services.loadStudents(); // this is the injected dependency
+		List<Student> studentlist = services.loadStudents(); 
 
 		model.addAttribute("students", studentlist);
 
@@ -52,7 +52,7 @@ public class StudentController {
 			services.updateStudent(studentDTO);
 		}
 
-		return "redirect:/list";
+		return "redirect:/";
 	}
 
 	@GetMapping("/update")
@@ -72,7 +72,7 @@ public class StudentController {
 		services.deleteStudents(id);	
 		
 		
-		return "redirect:/list";
+		return "redirect:/";
 	}
 	
 
